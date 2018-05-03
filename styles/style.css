@@ -1,0 +1,335 @@
+/* ================================= 
+ I made this with the mobile first aproach.
+ By Axel Dahlin.
+==================================== */
+
+
+
+
+
+/* ================================= 
+  Fonts
+==================================== */
+@font-face {
+    font-family: 'sinkin_sans400_regular';
+    src: url('../fonts/SinkinSans-400Regular-webfont.eot');
+    src: url('../fonts/SinkinSans-400Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SinkinSans-400Regular-webfont.woff') format('woff'),
+         url('../fonts/SinkinSans-400Regular-webfont.ttf') format('truetype'),
+         url('../fonts/SinkinSans-400Regular-webfont.svg#sinkin_sans400_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    font-family: 'robotoregular';
+	line-height: 1.6;
+	font-family: 'sinkin_sans400_regular';
+	font-size: 14px;
+
+
+}
+
+h1,
+h2,
+h3 {
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+li {
+	list-style: none;
+}
+
+ul,
+ol {
+	padding: 0;
+	margin:  0;
+}
+
+
+img {
+	width: 100%;
+	vertical-align: bottom;   /*<---- Both these takes away white space between img.*/
+	display: block;			 /* <---- It took both to do the job when the screen is re-sized.	*/						
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+/* ==== Container styles ==== */
+
+.main-header {
+	padding: 20px 0px;
+}
+
+.header-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+
+}
+
+.article-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	padding: 30px 1em;
+}
+
+.main-footer {
+	text-align: center;
+	padding: 2em 0px;
+	background-color: #bdc3c7;
+}
+
+
+/* ==== Navigation ==== */
+
+.site-name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.site-name {
+	font-size: 23px; 
+}
+
+.main-nav a {
+	color: #e74c3c;
+	font-size: 1.2em;
+}
+.main-nav a:hover {
+	color: #000;
+}
+
+
+
+
+
+/* ==== Page Elements ==== */
+/* ---- Main header---- */
+.site-name {
+	margin: 0px;
+}
+
+
+/* ---- Article section ---- */
+
+.banner {
+	background-image: linear-gradient(0deg, #e74c3c, transparent 99%), url(../img/barcelona_1.jpg);
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.banner-slogan {
+	color: #fff;
+	width: 57%;
+	text-align: center;
+	font-size: 17px;
+
+}
+
+
+
+/* ---- Article section ---- */
+
+
+.img-container {
+	width: 50%;
+	margin-bottom: 30px;
+	max-width: 230px;
+	min-width: 185px;
+
+}
+
+.round-img {
+	width: 100%;
+	height: auto;
+	border-radius: 7%;
+	border: 5px solid #e74c3c;
+}
+
+
+
+.article-text {
+
+
+}
+
+.article-heading {
+
+
+}
+
+
+/* ---- Changing color in articles---- */
+
+.article-style2 {
+	background-color: #e74c3c;
+	color: #fff;
+}
+
+
+
+
+.article-style1 {
+	background-color: #fff;
+	color: #000;
+
+}
+
+.border-style2 {
+	border: 5px solid #fff;
+}
+
+
+/* ---- Stil img (that apears at 769px)--- */
+.stil-img {
+    display: none;
+
+}
+
+.still-img-text {
+	color: #fff;
+	width: 90%;
+	text-align: center;
+	font-size: 20px;
+
+}
+
+/* ---- Contact--- */
+.contact {
+	text-align: center;
+	padding: 2em 0em;
+	background-color: #34495e;
+}
+
+.fab {
+	font-size: 45px;
+}
+
+.contact-nav li {
+	display: block;
+	margin-top: 1em; 
+}
+
+
+/* ---- Footer ---- */
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+	.main-nav {
+		display: flex;
+	}
+	.article-container {
+		flex-direction: row;
+		padding-top: 60px;
+		padding-bottom: 60px; 
+	}
+
+	.img-container {
+		margin: 0px;
+	}
+
+
+	.order-left {
+		order: 1000;
+	}
+
+	.img-margin-left {
+		margin-left: 30px;
+
+}
+
+	.img-margin-right {
+		margin-right: 30px;
+}
+
+	.banner-slogan {
+	width: 70%;
+	font-size: 20px;
+	}
+
+	.stil-img {
+    background-image: linear-gradient(0deg, #e74c3c, transparent 99%), url(../img/water.jpg);
+    background-repeat: no-repeat;
+   background-size: cover;
+    text-align: center;
+    height: 430px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+
+	.contact {
+		padding-bottom: 60px;
+		padding-top: 60px;
+	}
+
+
+}
+
+@media (min-width: 1180px) {
+
+	.header-container {
+		flex-direction: row;
+	}
+
+	.site-name {
+		margin-right: auto;
+	}
+	.article-container,
+	.header-container {
+		width: 80%;
+		max-width: 1200px;
+	}
+
+	.img-margin-left {
+		margin-left: 40px;
+	}
+
+	.img-margin-right {
+		margin-right: 40px;
+	}
+	.article-container {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.banner-slogan {
+		width: 40%;
+	}
+
+
+}
